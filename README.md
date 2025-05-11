@@ -7,16 +7,17 @@ Aplikacja optymalizuje sposób płatności za zamówienia w sklepie internetowym
 ## Jak to działa
 
 Dla każdej transakcji algorytm:
+
 - Wybiera najkorzystniejszą dostępną metodę płatności (punkty lub karta z rabatem),
 - Stosuje odpowiednie promocje, zgodnie z zasadami (np. pełna płatność kartą lub min. 10% punktami),
 - Dba o to, by nie przekroczyć limitów danej metody płatności.
 
 ## Wymagania
 
-- Java 21 (kompatybilna także z Java 17)
+- Java 21
 - System plików z dostępem do dwóch plików JSON:
-    - `orders.json` – zamówienia,
-    - `paymentmethods.json` – dostępne metody płatności.
+  - `orders.json` – zamówienia,
+  - `paymentmethods.json` – dostępne metody płatności.
 
 ## Struktura danych wejściowych
 
@@ -75,9 +76,7 @@ PUNKTY 100.00
 
 ## Budowanie
 
-Projekt używa narzędzia Maven (lub Gradle — w zależności od Twojego wyboru).
-
-Przykład budowania z Maven:
+Projekt używa narzędzia Maven.
 
 ```bash
 mvn clean package
@@ -97,7 +96,3 @@ mvn test
 
 - Obsługa błędów (np. brak środków, zły format danych)
 - Wydajność zoptymalizowana dla do 10 000 zamówień
-
-## Licencja
-
-Projekt edukacyjny – brak licencji.
